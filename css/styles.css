@@ -1,0 +1,86 @@
+html,
+body {
+  background-color: #161718;
+}
+
+#profileCard {
+  z-index: 3;
+  background-color: #0d0e0e;
+  border: 0.02px solid rgb(51, 51, 51);
+  color: white;
+  border-radius: 57.5px;
+  text-align: center;
+  width: 500px;
+  /* 300 for mobile */
+  height: 400px;
+  position: absolute; /*Can also be `fixed`*/
+  left: 0;
+  right: 0;
+  top: 40px;
+  bottom: 0;
+  margin: auto;
+}
+
+#profileImg {
+  position: relative;
+  top: -50%;
+  transform: translateY(120%);
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgb(255 255 255/0.05);
+  margin-inline: auto;
+}
+
+#profileImg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+}
+
+@font-face {
+  font-family: "MyWebFont";
+  src: url("../assets/jobtitle.woff2") format("woff2");
+}
+
+#jobTitle {
+  color: #d8d8d8bf;
+  letter-spacing: 0.75px;
+  font-size: 15px;
+  font-family: "MyWebFont";
+}
+
+img,
+h1,
+h2 {
+  user-drag: none;
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+#overlay {
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  height: 100%;
+  width: 100%;
+  --tw-bg-opacity: 1;
+  background-color: rgb(27 27 27 / var(--tw-bg-opacity));
+  opacity: 0.5;
+}
+
+/* Mobile */
+
+@media screen and (max-width: 700px) {
+  #profileCard {
+    width: 100vw;
+  }
+  #bar {
+    transform: translateY(-350%) !important;
+    margin-bottom: 10px;
+  }
+}
